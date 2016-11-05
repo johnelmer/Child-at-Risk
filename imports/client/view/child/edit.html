@@ -1,0 +1,17 @@
+EDIT CHILD
+<div>
+	First Name: <input type="text" name="fname" ng-model='editChild.child.firstName'>
+	Middle Name: <input type="text" name="mname" ng-model='editChild.child.middleName'>
+	Last Name: <input type="text" name="lname" ng-model='editChild.child.lastName'>
+	Nickname: <input type="text" name="nname" ng-model='editChild.child.nickname'>
+	Birthday: <input type="date" name="bday" ng-model='editChild.child.bday'>
+	Sex:
+	<input type="radio" name="male" value="Male" ng-model='editChild.child.sex'> 
+	<input type="radio" name="female" value="Female" ng-model='editChild.child.sex'>
+	Nationality: <input type="date" name="nationality" ng-model='editChild.child.nationality'>
+	Race: <input type="date" name="race" ng-model='editChild.child.race'>
+	Religion: <input type="date" name="religion" ng-model='editChild.child.religion'>
+	Reason for being at the home:
+	<textarea ng-model='editChild.child.reason'></textarea>
+	<input type="submit" ng-click='editChild.save()' value="Save Child Details">
+</div>

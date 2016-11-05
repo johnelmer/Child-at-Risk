@@ -1,0 +1,17 @@
+ADD CHILD
+<div>
+	First Name: <input type="text" name="fname" ng-model='addChild.child.firstName'>
+	Middle Name: <input type="text" name="mname" ng-model='addChild.child.middleName'>
+	Last Name: <input type="text" name="lname" ng-model='addChild.child.lastName'>
+	Nickname: <input type="text" name="nname" ng-model='addChild.child.nickname'>
+	Birthday: <input type="date" name="bday" ng-model='addChild.child.bday'>
+	Sex:
+	<input type="radio" name="male" value="Male" ng-model='addChild.child.sex'> 
+	<input type="radio" name="female" value="Female" ng-model='addChild.child.sex'>
+	Nationality: <input type="date" name="nationality" ng-model='addChild.child.nationality'>
+	Race: <input type="date" name="race" ng-model='addChild.child.race'>
+	Religion: <input type="date" name="religion" ng-model='addChild.child.religion'>
+	Reason for being at the home:
+	<textarea ng-model='addChild.child.reason'></textarea>
+	<input type="submit" ng-click='addChild.save()' value="Save Child Details">
+</div>

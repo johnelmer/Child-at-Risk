@@ -1,0 +1,23 @@
+CHILDREN LIST
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Nickname</th>
+			<th>Sex</th>
+			<th>Birthday</th>
+			<th></th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat='child in childrenList.children'>
+			<td>{{ child.lastName }}, {{ child.firstName }} {{ child.middleName }}</td>
+			<td>{{ child.nickname }}</td>
+			<td>{{ child.sex }}</td>
+			<td>{{ child.birthday }}</td>
+			<td><a ui-sref='editChild({ childId: child._id })'>Edit</a></td>
+			<td><a ng-click='childrenList.delete(child)'>Delete</a></td>
+		</tr>
+	</tbody>
+</table>
