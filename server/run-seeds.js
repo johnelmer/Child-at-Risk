@@ -1,0 +1,1 @@
+import '/imports/server/seeds/child-seeds'

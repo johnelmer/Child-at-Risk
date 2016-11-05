@@ -6,6 +6,7 @@ CHILDREN LIST
 			<th>Nickname</th>
 			<th>Sex</th>
 			<th>Birthday</th>
+			<th>Status</th>
 			<th></th>
 			<th></th>
 		</tr>
@@ -16,8 +17,9 @@ CHILDREN LIST
 			<td>{{ child.nickname }}</td>
 			<td>{{ child.sex }}</td>
 			<td>{{ child.birthday }}</td>
-			<td><a ui-sref='editChild({ childId: child._id })'>Edit</a></td>
-			<td><a ng-click='childrenList.delete(child)'>Delete</a></td>
+			<td>{{ child.status }}</td>
+			<td><button ui-sref='editChildren({ childId: child._id })'>Edit</button></td>
+			<td><button ng-click='childrenList.delete(child)'>Delete</button></td>
 		</tr>
 	</tbody>
 </table>

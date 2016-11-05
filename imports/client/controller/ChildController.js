@@ -8,10 +8,10 @@ import Child from '../../model/Child'
 	    $reactive(this).attach($scope);
 	    this.helpers({
 	      children(){
-	        return child.findAll();
+	        return Child.findAll();
 	      },
 	      child(){
-	        return child.findOne({
+	        return Child.findOne({
 	          _id: $stateParams.childId
 	        });
 	      }
@@ -24,13 +24,16 @@ import Child from '../../model/Child'
 
  	delete(doc) {
  		if(doc) {
- 			child.remove(doc);
+ 			Child.remove(doc);
  			this.reset();
  		}
  	}
 
  	save() {
- 		new child(this.child).save()
+ 		// Child.add(this.child)
+ 		let c =  new Child(this.child)
+ 		c.status = "In House"
+ 		c.save()
     	this.reset()
  	}
  }
