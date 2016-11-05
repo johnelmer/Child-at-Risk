@@ -2,11 +2,11 @@ import angular from 'angular'
 import angularMeteor from 'angular-meteor'
 import uiRouter from 'angular-ui-router'
 
-class Route {
+class GenRoute {
 	static config($stateProvider, $urlRouterProvider, $locationProvider) {
 	  'ngInject';
 	  $locationProvider.html5Mode(true)
-	  $urlRouterProvider.otherwise('/listChildren');
+	  $urlRouterProvider.otherwise('/children');
 	  $stateProvider
 	    .state('listChildren', {
 	      url: '/children',
@@ -23,4 +23,4 @@ class Route {
 	}
 }
 
-export default Route
+export default GenRoute
